@@ -1,0 +1,50 @@
+//***************************************************************
+// Sphere.java		
+// Tyler Shipton T00691413
+// COMP 1131 Assignment 2 Question 3
+// This program reads the radius of a sphere then calculates and
+// displays the circumference, volume and surface area.
+//***************************************************************
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Sphere
+{
+	//--------------------------------------------------------------
+	// Prompts the user for the radius of a sphere and
+	// calculates the circumference, volume and surface 
+	// area with the following formulas:
+	// Circumference = 2πr
+	// Volume = 4/3πr³
+	// Surface Area = 4πr²
+	//--------------------------------------------------------------
+	public static void main (String[]	args)
+	{
+
+		Scanner scan = new Scanner(System.in);
+		double circumference;
+		double volume;
+		double surface_area;
+		double radius;
+		
+		// prompts user for radius of sphere
+		System.out.print("Enter the radius of the sphere: ");
+		radius = scan.nextDouble();
+		
+		circumference = 2 * Math.PI * radius;
+		volume = (4.0/3.0) * Math.PI * Math.pow(radius, 3);
+		surface_area = 4 * Math.PI * Math.pow(radius,2);
+		
+		DecimalFormat fmt = new DecimalFormat("0.####");
+		
+		System.out.println("Radius of sphere: " + radius);
+		System.out.println("Circumference: " + fmt.format(circumference));
+		System.out.println("Volume: " + fmt.format(volume));
+		System.out.println("Surface Area: " + fmt.format(surface_area));
+		
+
+	
+	}
+	
+}
