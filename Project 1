@@ -1,0 +1,49 @@
+//***************************************************************
+// UserName.java			
+// Tyler Shipton T00691413
+//  COMP 1131 Assignment 2 Question 1
+// This program prompts the user for their first and last name,
+// and a random username will be generated.
+//***************************************************************
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class UserName
+{
+
+	//----------------------------------------------------------------
+	// Prompts user for first and last name, and generates a username
+	// with a random number.
+	//----------------------------------------------------------------
+	public static void main(String[]	args)
+	{
+		
+	Random UserName = new Random();
+	int UserNumber;
+	String FirstName;
+	String LastName;
+	Scanner scan = new Scanner(System.in);
+	
+	// prompts user for first and last name.
+	System.out.print("Enter your first name: ");
+	FirstName = scan.nextLine();
+	
+	System.out.print("Enter your last name: ");
+	LastName = scan.nextLine();
+	
+	LastName = LastName.substring(0, 4);
+	FirstName = FirstName.substring(0,2);
+	
+	// Generates random number for username.
+	UserNumber= UserName.nextInt(99) + 10;
+	
+	System.out.println("Your username is: " + LastName + FirstName 
+						+ UserNumber); 
+	
+	}
+
+
+
+
+}
