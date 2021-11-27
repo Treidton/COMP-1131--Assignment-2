@@ -1,0 +1,46 @@
+//***************************************************************
+// CalculateDistance.java		
+// Tyler Shipton T00691413
+//  COMP 1131 Assignment 2 Question 2
+// This program prompts the user for four coordinates (x,y)
+// and calculates the distance between them.
+//***************************************************************
+
+import java.util.Scanner;
+
+public class CalculateDistance{
+	
+	//------------------------------------------------------------
+	// Prompts the user for four seperate coordinates (x,y)
+	// and calculates the distance between them using the 
+	// formula √(x2 - x1)²  - (y2 - y1)²
+
+	public static void main(String[]	args)
+	{
+	
+	Scanner scan = new Scanner(System.in);
+	double x1, x2, y1, y2;
+	double distance;
+	
+	// prompts user for input on x,y, x2, y2 coordinates.
+	System.out.println("Enter X1 coordinates: ");
+	x1 = scan.nextDouble();
+	
+	System.out.println("Enter X2 coordinates: ");
+	x2 = scan.nextDouble();
+	
+	System.out.println("Enter Y1 coordinates: ");
+	y1 = scan.nextDouble();
+	
+	System.out.println("Enter Y2 coordinates: ");
+	y2 = scan.nextDouble();
+	
+	
+	// calculates the distance of coordinates
+	distance = Math.sqrt(Math.pow(x2-x1, 2) + (Math.pow(y2 - y1, 2)));
+	
+	System.out.println("The distance is " + distance);
+	}
+	
+	
+}
